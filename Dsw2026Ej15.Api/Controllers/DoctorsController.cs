@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Dsw2026Ej15.Data;
 using Dsw2026Ej15.Domain;
-using System.Linq;
 
 namespace Dsw2026Ej15.Api.Controllers;
 
@@ -38,7 +37,7 @@ public class DoctorsController : ControllerBase
         }
 
         var speciality = _persistence.GetSpecialities()
-            .FirstOrDefault(s => s.Name.Equals(input.SpecialityName, StringComparison.OrdinalIgnoreCase));
+            .FirstOrDefault(s => s.Id == input.SpecialityId);
 
         if (speciality == null)
         {
