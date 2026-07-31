@@ -21,8 +21,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Update="specialities.json">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		<None Include="..\specialities.json" Link="specialities.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>
 
